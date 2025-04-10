@@ -10,10 +10,9 @@ def detect_language(text: str) -> str:
         return 'ru'
     elif has_en and not has_ru:
         return 'en'
-    return 'ru' 
+    return 'ru'
 
 def process_text(text: str, lang: str):
-    """Обрабатывает текст, сохраняя не-буквенные символы и регистр"""
     result = []
     letters = []
     
@@ -110,6 +109,7 @@ def vigenere_decrypt(ciphertext: str, key: str) -> str:
     
     decrypted_letters = []
     key_len = len(key_letters)
+    
     if lang == 'ru':
         alphabet_lower = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
         alphabet_upper = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
